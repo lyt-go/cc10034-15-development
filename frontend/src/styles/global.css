@@ -70,3 +70,27 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .analysis-chart { display: flex; align-items: flex-end; gap: 8px; height: 160px; padding: 12px 0; }
 .analysis-bar { flex: 1; border-radius: 4px 4px 0 0; background: var(--brand); min-width: 24px; position: relative; transition: height 0.4s; }
 .analysis-bar span { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 10px; color: var(--muted); white-space: nowrap; }
+/* 整改复核 / 发布资格 */
+.tab-row { display: flex; gap: 8px; margin-bottom: 12px; }
+.tab-btn { border: 1px solid var(--border); background: #fff; border-radius: 6px; padding: 6px 14px; cursor: pointer; font-size: 13px; }
+.tab-btn.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; white-space: nowrap; }
+.badge-ok { background: #dcfae6; color: #15803d; }
+.badge-warn { background: #fef3c7; color: #b45309; }
+.badge-danger { background: #fee2e2; color: #b42318; }
+.btn.danger { background: #b42318; border-color: #b42318; color: #fff; }
+.cell-note { max-width: 260px; color: var(--muted); font-size: 12px; }
+.cell-sub { color: var(--muted); font-size: 12px; }
+.info-text { color: #15803d; font-size: 12px; }
+.detail-grid { display: grid; grid-template-columns: 110px 1fr; gap: 6px 10px; margin: 8px 0 12px; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+.detail-grid dt { font-size: 12px; color: var(--muted); }
+.detail-grid dd { margin: 0; font-size: 13px; }
+.create-field textarea { width: 100%; box-sizing: border-box; border: 1px solid var(--border); border-radius: 6px; padding: 8px; font-family: inherit; resize: vertical; }
+.verdict-panel { margin-top: 16px; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.verdict-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.verdict-tag { font-size: 14px; padding: 6px 12px; }
+.resource-card { border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 12px 0; background: #fafbfc; }
+.resource-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.resource-card h4 { font-size: 13px; margin: 12px 0 6px; color: #334155; }
+.inner-table { font-size: 12px; }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }

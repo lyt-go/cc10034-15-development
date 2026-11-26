@@ -20,6 +20,7 @@ from app.services.consent_registry import ConsentRegistryService
 from app.services.risk_scan import RiskScanService
 from app.services.deploy_policy import DeployPolicyService
 from app.services.anomaly_detect import AnomalyDetectService
+from app.services.rectify import RectifyReviewService, RiskIssueService
 
 SERVICES: dict[str, BaseModuleService] = {
     "mask_rule": MaskRuleService(),
@@ -45,3 +46,29 @@ SERVICES: dict[str, BaseModuleService] = {
 
 def service_for(module: str) -> BaseModuleService | None:
     return SERVICES.get(module)
+
+
+__all__ = [
+    "SERVICES",
+    "service_for",
+    "MaskRuleService",
+    "PrivacyBudgetService",
+    "NoiseEngineService",
+    "SecureAggService",
+    "AccessAuditService",
+    "GrantApprovalService",
+    "ClassifyTagService",
+    "FederatedTrainService",
+    "GradientEncryptService",
+    "PseudonymService",
+    "KAnonymityService",
+    "DifferentialSqlService",
+    "EncryptIndexService",
+    "WatermarkService",
+    "ConsentRegistryService",
+    "RiskScanService",
+    "DeployPolicyService",
+    "AnomalyDetectService",
+    "RectifyReviewService",
+    "RiskIssueService",
+]

@@ -29,3 +29,26 @@ class EntryPayload(BaseModel):
 class ActionPayload(BaseModel):
     action: str
     remark: str | None = None
+
+
+class ClosureSubmitPayload(BaseModel):
+    """整改人提交销项。"""
+    issue_id: int
+    rectify_note: str
+
+
+class ReviewDecisionPayload(BaseModel):
+    """发布人复核销项单。"""
+    approve: bool
+    reviewer: str
+    recheck_note: str
+    opinion: str | None = None
+
+
+class NewRiskPayload(BaseModel):
+    """同资源新风险登记（旧销项单不能盖掉新发现）。"""
+    resource: str
+    problem: str
+    level: str | None = "中"
+    source_task: str | None = ""
+    owner: str | None = ""
